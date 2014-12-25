@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "caffe/blob.hpp"
@@ -314,6 +315,12 @@ class Layer {
       param_propagate_down_.resize(param_id + 1, true);
     }
     param_propagate_down_[param_id] = value;
+  }
+
+  virtual DiagonalAffineMap<Dtype> coord_map() {
+    NOT_IMPLEMENTED;
+    // suppress warnings
+    return DiagonalAffineMap<Dtype>(vector<pair<Dtype, Dtype> >());
   }
 
 
