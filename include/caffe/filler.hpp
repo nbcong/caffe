@@ -240,7 +240,7 @@ operation is equivalent to the following call in Python with Scikit.Image.
 \code{.py}
 out = skimage.transform.rescale(img, factor, mode='constant', cval=0)
 \endcode
- */
+
 template <typename Dtype>
 class BilinearFiller : public Filler<Dtype> {
  public:
@@ -261,7 +261,7 @@ class BilinearFiller : public Filler<Dtype> {
          << "Sparsity not supported by this Filler.";
   }
 };
-
+*/
 
 /*!
 @brief Fills a Blob with coefficients for bilinear interpolation.
